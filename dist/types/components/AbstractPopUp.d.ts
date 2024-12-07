@@ -1,7 +1,7 @@
 /// <reference types="react" />
 import { SimpleFunction, ThemeConfig } from "../types";
 export declare const SECONDS: number;
-declare type AbstractPopUpProps = {
+type AbstractPopUpProps = {
     show: boolean;
     hide?: boolean;
     pause?: SimpleFunction;
@@ -15,6 +15,6 @@ declare type AbstractPopUpProps = {
     };
     children?: JSX.Element;
 };
-declare const AbstractPopUp: ({ show, hide, pause, goBack, onClose, themeObject, cardHeader, children, }: AbstractPopUpProps) => JSX.Element;
+declare const AbstractPopUp: ({ show: outerShow, hide, pause, goBack, onClose, themeObject, cardHeader, children, }: AbstractPopUpProps) => import("react/jsx-runtime").JSX.Element;
 export default AbstractPopUp;
 //# sourceMappingURL=AbstractPopUp.d.ts.map

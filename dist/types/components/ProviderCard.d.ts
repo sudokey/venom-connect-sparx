@@ -1,6 +1,5 @@
-/// <reference types="react" />
 import { ConnectorType, Theme, WalletDisplay, WayToConnect } from "../types";
-export declare type ProviderCardProps = WalletDisplay & {
+export type ProviderCardProps = WalletDisplay & {
     isProviderExist: boolean;
     isCurrentBrowser: boolean;
     themeObject: Theme;
@@ -14,5 +13,5 @@ export declare type ProviderCardProps = WalletDisplay & {
     allBrowsersNames?: string[];
     browsersNames?: string[];
 };
-export declare const ProviderCard: ({ name, logo, logoWhite, description, isProviderExist, isCurrentBrowser, themeObject, themeName, onClick, connectorType, browser, options, isFirst, isBadBrowser, allBrowsersNames, browsersNames, }: ProviderCardProps) => JSX.Element;
+export declare const ProviderCard: ({ name: nameRaw, logo, logoWhite, description, isProviderExist, isCurrentBrowser, themeObject, themeName, onClick, connectorType, browser: browserNameRaw, options, isFirst, isBadBrowser, allBrowsersNames, browsersNames, }: ProviderCardProps) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=ProviderCard.d.ts.map

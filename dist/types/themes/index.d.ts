@@ -20,6 +20,6 @@ export declare const themesList: {
         theme: import("../types").Theme;
     };
 };
-export declare type ThemeNameList = typeof lightTheme.name | typeof darkTheme.name | typeof venomTheme.name;
+export type ThemeNameList = typeof lightTheme.name | typeof darkTheme.name | typeof venomTheme.name;
 export declare const getThemeConfig: (theme: ThemeNameList | ThemeConfig["theme"]) => ThemeConfig;
 //# sourceMappingURL=index.d.ts.map

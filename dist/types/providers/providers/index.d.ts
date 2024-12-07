@@ -3,7 +3,8 @@ export * from "./everwallet";
 export * from "./oxychatwallet";
 export * from "./oneartwallet";
 export * from "./venomwallet";
-declare type linkCreator = (links: {
+export * from "./sparxwallet";
+type linkCreator = (links: {
     ios: string | null | undefined | {
         targetLink: string;
     };
@@ -32,6 +33,15 @@ declare const defaultLinks: {
         }[];
     };
     everwallet: {
+        ios: string;
+        android: string;
+        qr: undefined;
+        extension: {
+            browser: string;
+            link: string | null;
+        }[];
+    };
+    sparxwallet: {
         ios: string;
         android: string;
         qr: undefined;

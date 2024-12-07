@@ -8,10 +8,12 @@ import {
   getVenomQr,
   venomDefaultLinks,
 } from "./venomwallet";
+import { sparxDefaultLinks } from "./sparxwallet";
 export * from "./everwallet";
 export * from "./oxychatwallet";
 export * from "./oneartwallet";
 export * from "./venomwallet";
+export * from "./sparxwallet";
 
 type linkCreator = (
   links:
@@ -53,6 +55,7 @@ type linkCreator = (
 const defaultLinks = {
   venomwallet: venomDefaultLinks,
   everwallet: everDefaultLinks,
+  sparxwallet: sparxDefaultLinks,
   oxychatwallet: oxychatDefaultLinks,
   oneartwallet: oneartDefaultLinks,
 };

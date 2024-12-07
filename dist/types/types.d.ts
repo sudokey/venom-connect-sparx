@@ -1,18 +1,18 @@
 /// <reference types="react" />
 import { ThemeNameList } from "./themes";
-declare type BackdropTheme = {
+type BackdropTheme = {
     color: string;
     opacity?: number | string;
     backdropFilter?: string;
     offset?: number | string;
 };
-declare type CommonTheme = {
+type CommonTheme = {
     text: {
         color: string;
     };
     backdrop: BackdropTheme;
 };
-declare type PopupTheme = {
+type PopupTheme = {
     maxWidth?: number;
     background: {
         color: string;
@@ -38,7 +38,7 @@ declare type PopupTheme = {
         color: string;
     };
 };
-declare type ItemTheme = {
+type ItemTheme = {
     background: {
         color: string;
     };
@@ -70,7 +70,7 @@ declare type ItemTheme = {
         };
     };
 };
-export declare type Theme = {
+export type Theme = {
     common: CommonTheme;
     popup: PopupTheme;
     item: ItemTheme;
@@ -78,15 +78,15 @@ export declare type Theme = {
         [item: string]: ItemTheme;
     };
 };
-export declare type ThemeConfig = {
+export type ThemeConfig = {
     name: string;
     theme: Theme;
 };
-export declare type ThemesList = {
+export type ThemesList = {
     [name: string]: ThemeConfig;
 };
-export declare type SimpleFunction = (input?: any) => void;
-declare type Links = {
+export type SimpleFunction = (input?: any) => void;
+type Links = {
     extension: {
         browser: "chrome" | "firefox";
         link: string | null;
@@ -99,18 +99,18 @@ declare type Links = {
         targetLink: string;
     };
 };
-declare type ProviderDisplay = {
+type ProviderDisplay = {
     name: string;
     logo: string | JSX.Element | {
         [key: string]: string;
     };
     logoWhite?: string;
 };
-export declare type WalletDisplay = ProviderDisplay & {
+export type WalletDisplay = ProviderDisplay & {
     description?: string;
 };
-export declare type ConnectorType = "extension" | "qr" | "mobile" | "ios" | "android";
-export declare type WayToConnect = {
+export type ConnectorType = "extension" | "qr" | "mobile" | "ios" | "android";
+export type WayToConnect = {
     id: string;
     type: ConnectorType;
     options?: any;
@@ -120,17 +120,17 @@ export declare type WayToConnect = {
  * options?: any,
  * callbacks: Callbacks,
  */
-export declare type ExtensionConnector = (provider: any, options: any | undefined, callbacks: Callbacks) => Promise<any>;
+export type ExtensionConnector = (provider: any, options: any | undefined, callbacks: Callbacks) => Promise<any>;
 /**
  * provider: ProviderRpcClient,
  * options?: any,
  */
-declare type Connector = (provider?: any, options?: any) => Promise<any>;
-export declare type ProviderOptions = {
+type Connector = (provider?: any, options?: any) => Promise<any>;
+export type ProviderOptions = {
     id: string;
     walletWaysToConnect: (ProviderDisplay & WayToConnect)[];
 };
-export declare type ProviderOptionsWithConnector = {
+export type ProviderOptionsWithConnector = {
     id: string;
     links?: Partial<Links>;
     walletWaysToConnect: (ProviderDisplay & WayToConnect & {
@@ -146,10 +146,10 @@ export declare type ProviderOptionsWithConnector = {
         };
     })[];
 };
-export declare type ProviderOptionsList = (ProviderOptionsWithConnector & {
+export type ProviderOptionsList = (ProviderOptionsWithConnector & {
     id: string;
 })[];
-declare type ProviderOptionsWithOnClick = {
+type ProviderOptionsWithOnClick = {
     id: string;
     links?: Partial<Links>;
     walletWaysToConnect: (ProviderDisplay & WayToConnect & {
@@ -157,10 +157,10 @@ declare type ProviderOptionsWithOnClick = {
         package: any;
     })[];
 };
-export declare type ProviderOptionsListWithOnClick = (ProviderOptionsWithOnClick & {
+export type ProviderOptionsListWithOnClick = (ProviderOptionsWithOnClick & {
     id: string;
 })[];
-export declare type ProviderOptionsWithConnectorOptional = {
+export type ProviderOptionsWithConnectorOptional = {
     id: string;
     links?: Partial<Links>;
     walletWaysToConnect: (Partial<ProviderDisplay> & WayToConnect & {
@@ -177,28 +177,28 @@ export declare type ProviderOptionsWithConnectorOptional = {
     })[];
     defaultWalletWaysToConnect?: ConnectorType[];
 };
-declare type UserProviderOptions = Omit<ProviderOptionsWithConnectorOptional, "id">;
-export declare type UserProvidersOptions = {
+type UserProviderOptions = Omit<ProviderOptionsWithConnectorOptional, "id">;
+export type UserProvidersOptions = {
     [id: string]: UserProviderOptions;
 };
-export declare type EventCallback = {
+export type EventCallback = {
     event: string;
     callback: (result: any) => void;
 };
-export declare type VenomConnectOptions = {
+export type VenomConnectOptions = {
     theme: ThemeNameList | ThemeConfig["theme"];
     providersOptions: UserProvidersOptions;
     checkNetworkId: number | number[];
     checkNetworkName?: string;
     nTries?: number;
 };
-export declare type ProviderControllerOptions = {
+export type ProviderControllerOptions = {
     providersOptions: UserProvidersOptions;
     checkNetworkId: number | number[];
     checkNetworkName: string;
     nTries?: number;
 };
-export declare type Callbacks = {
+export type Callbacks = {
     authorizationCompleted: (provider: any) => void;
     extensionWindowClosed: () => void;
     extensionWindowError: (error: any) => void;

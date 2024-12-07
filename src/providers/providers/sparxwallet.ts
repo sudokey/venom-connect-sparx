@@ -19,7 +19,7 @@ const everAndroidDeepLink =
 const everExtensionLinkChrome =
   "https://chrome.google.com/webstore/detail/ever-wallet/cgeeodpfagjceefieflmdfphplkenlfk";
 const everExtensionLinkFirefox = "https://everwallet.net";
-export const everDefaultLinks = {
+export const sparxDefaultLinks = {
   ios: everIosDeepLink,
   android: everAndroidDeepLink,
   qr: undefined,
@@ -42,7 +42,7 @@ export const everDefaultLinks = {
 };
 //
 
-export const getEverQr = () => {
+export const getSparxQr = () => {
   return "";
 };
 
@@ -62,8 +62,8 @@ const EverWalletLogos = {
   },
 };
 
-export const everwallet: ProviderOptions = {
-  id: "everwallet",
+export const sparxwallet: ProviderOptions = {
+  id: "sparxwallet",
   // wallet: {
   //   name: everWalletName,
   //   description: "The official wallet of the Everscale network",
@@ -83,9 +83,9 @@ export const everwallet: ProviderOptions = {
           ["isChrome", "isDesktop"],
           ["isFirefox", "isDesktop"],
         ],
-        installExtensionLink: (links: typeof everDefaultLinks | undefined) =>
-          getValueByKey("everwallet", "extension")(links),
-        checkIsProviderExist: () => !!window.__ever, // todo
+        installExtensionLink: (links: typeof sparxDefaultLinks | undefined) =>
+          getValueByKey("sparxwallet", "extension")(links),
+        checkIsProviderExist: () => !!window.__sparx, // todo
       },
     },
     {
@@ -93,18 +93,18 @@ export const everwallet: ProviderOptions = {
       type: "mobile",
       logo: EverWalletLogos.connectors.mobile,
       logoWhite: EverWalletLogos.connectors.mobileWhite,
-      name: "Ever Mobile App",
+      name: "Sparx Mobile App",
       options: {
-        qr: (links: typeof everDefaultLinks | undefined) =>
-          getValueByKey("everwallet", "qr")(links),
+        qr: (links: typeof sparxDefaultLinks | undefined) =>
+          getValueByKey("sparxwallet", "qr")(links),
         devises: [
           {
             type: "ios",
             img: EverWalletLogos.connectors.apple,
             text: "iOS App",
 
-            deepLink: (links: typeof everDefaultLinks | undefined) =>
-              getValueByKey("everwallet", "ios")(links),
+            deepLink: (links: typeof sparxDefaultLinks | undefined) =>
+              getValueByKey("sparxwallet", "ios")(links),
             alt: "iOS",
             storeId: "ios",
           },
@@ -114,8 +114,8 @@ export const everwallet: ProviderOptions = {
             text: "Android App",
 
             deepLink: (
-              links: typeof everDefaultLinks | undefined = everDefaultLinks
-            ) => getValueByKey("everwallet", "android")(links),
+              links: typeof sparxDefaultLinks | undefined = sparxDefaultLinks
+            ) => getValueByKey("sparxwallet", "android")(links),
             alt: "Android",
             storeId: "android",
           },
@@ -132,8 +132,8 @@ export const everwallet: ProviderOptions = {
         text: "Click here to open App Store",
 
         deepLink: (
-          links: typeof everDefaultLinks | undefined = everDefaultLinks
-        ) => getValueByKey("everwallet", "ios")(links),
+          links: typeof sparxDefaultLinks | undefined = sparxDefaultLinks
+        ) => getValueByKey("sparxwallet", "ios")(links),
       },
     },
     {
@@ -141,13 +141,13 @@ export const everwallet: ProviderOptions = {
       type: "android",
       logo: EverWalletLogos.connectors.android,
       logoWhite: EverWalletLogos.connectors.androidWhite,
-      name: "Ever Mobile App",
+      name: "Sparx Mobile App",
       options: {
         text: "Click here to open Google Play",
 
         deepLink: (
-          links: typeof everDefaultLinks | undefined = everDefaultLinks
-        ) => getValueByKey("everwallet", "android")(links),
+          links: typeof sparxDefaultLinks | undefined = sparxDefaultLinks
+        ) => getValueByKey("sparxwallet", "android")(links),
       },
     },
   ],

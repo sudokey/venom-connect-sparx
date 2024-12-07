@@ -1,11 +1,10 @@
-/// <reference types="react" />
-declare type CloseCrossWrapperProps = {
+type CloseCrossWrapperProps = {
     color: string;
     hoverColor?: string;
 };
-declare type CloseCrossProps = CloseCrossWrapperProps & {
+type CloseCrossProps = CloseCrossWrapperProps & {
     onClick: () => void;
 };
-export declare const CloseCross: ({ color, hoverColor, onClick }: CloseCrossProps) => JSX.Element;
+export declare const CloseCross: ({ color, hoverColor, onClick }: CloseCrossProps) => import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=CloseCross.d.ts.map

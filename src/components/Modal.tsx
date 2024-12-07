@@ -43,6 +43,8 @@ declare global {
     __hasEverscaleProvider?: boolean;
     __ever?: any;
 
+    __sparx?: any;
+
     // venom wallet
     __hasVenomProvider?: boolean;
     __venom?: any;

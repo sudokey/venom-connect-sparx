@@ -2,5 +2,6 @@ import everwallet from "./everwallet";
 import oxychatwallet from "./oxychatwallet";
 import oneartwallet from "./oneartwallet";
 import venomwallet from "./venomwallet";
-export { everwallet, oxychatwallet, oneartwallet, venomwallet };
+import sparxwallet from "./sparxwallet";
+export { everwallet, oxychatwallet, oneartwallet, venomwallet, sparxwallet };
 //# sourceMappingURL=index.d.ts.map

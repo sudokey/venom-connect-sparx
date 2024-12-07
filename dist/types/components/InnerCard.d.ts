@@ -1,9 +1,8 @@
-/// <reference types="react" />
 import { ThemeConfig } from "../types";
-declare type QRCardProps = {
+type QRCardProps = {
     qr: string | null;
     themeConfig: ThemeConfig;
 };
-export declare const QrCard: ({ themeConfig, qr }: QRCardProps) => JSX.Element | null;
+export declare const QrCard: ({ themeConfig, qr }: QRCardProps) => import("react/jsx-runtime").JSX.Element | null;
 export {};
 //# sourceMappingURL=InnerCard.d.ts.map

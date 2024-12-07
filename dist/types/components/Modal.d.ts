@@ -1,9 +1,9 @@
-/// <reference types="react" />
 import { ProviderOptionsListWithOnClick, SimpleFunction, ThemeConfig } from "../types";
 declare global {
     interface Window {
         __hasEverscaleProvider?: boolean;
         __ever?: any;
+        __sparx?: any;
         __hasVenomProvider?: boolean;
         __venom?: any;
         __oxy?: any;
@@ -11,7 +11,7 @@ declare global {
         venomNetworkIntervalId?: number;
     }
 }
-declare type ModalProps = {
+type ModalProps = {
     error?: string;
     networkName: string;
     themeConfig: ThemeConfig;
@@ -21,7 +21,7 @@ declare type ModalProps = {
     disconnect?: SimpleFunction;
     clearError?: () => void;
 };
-export declare type ModalState = {
+export type ModalState = {
     show: boolean;
     themeConfig?: ThemeConfig;
     wrongNetwork?: boolean;
@@ -32,6 +32,6 @@ export declare type ModalState = {
         text?: string;
     };
 };
-export declare const Modal: ({ error, clearError, networkName, themeConfig, options, onClose, changeWallet, disconnect, }: ModalProps) => JSX.Element;
+export declare const Modal: ({ error, clearError, networkName, themeConfig: initThemeConfig, options, onClose, changeWallet, disconnect, }: ModalProps) => import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=Modal.d.ts.map

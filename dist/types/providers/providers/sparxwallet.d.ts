@@ -1,7 +1,7 @@
 import { ProviderOptions } from "../../types";
 import EverWalletLogo from "../logos/EverWalletLogo.svg";
 export { EverWalletLogo };
-export declare const everDefaultLinks: {
+export declare const sparxDefaultLinks: {
     ios: string;
     android: string;
     qr: undefined;
@@ -10,6 +10,6 @@ export declare const everDefaultLinks: {
         link: string | null;
     }[];
 };
-export declare const getEverQr: () => string;
-export declare const everwallet: ProviderOptions;
+export declare const getSparxQr: () => string;
+export declare const sparxwallet: ProviderOptions;
 //# sourceMappingURL=sparxwallet.d.ts.map

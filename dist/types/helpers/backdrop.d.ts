@@ -1,5 +1,5 @@
 import { ModalState } from "../components";
-export declare type ToggleExtensionWindow = {
+export type ToggleExtensionWindow = {
     isExtensionWindowOpen: boolean;
     popUpText?: ModalState["popUpText"];
 };

@@ -1,11 +1,11 @@
-declare type Logger = {
+type Logger = {
     type?: "error" | "log";
     key?: string;
     value?: string;
 };
 export declare const log: ({ type, key, value }: Logger) => void;
 export declare const getKey: (name: string, type: string) => string;
-declare type MakeMove = {
+type MakeMove = {
     logger: {
         before: string;
         after: string;

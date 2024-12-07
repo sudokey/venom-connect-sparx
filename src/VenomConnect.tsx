@@ -428,8 +428,8 @@ class VenomConnect {
     );
     const isSparxWalletBrowser = !!(
       navigator &&
-      navigator.userAgent.includes("EverWalletBrowser") &&
-      ids.includes("SparXWalletBrowser")
+      navigator.userAgent.includes("SparXWalletBrowser") &&
+      ids.includes("sparxwallet")
     );
     const isOxyWalletBrowser = !!(
       navigator &&

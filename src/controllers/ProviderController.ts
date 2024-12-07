@@ -238,6 +238,17 @@ export class ProviderController {
             standalone: {}, // ?
           }
         : {},
+      sparxwallet: window
+        ? {
+            extension: {
+              forceUseFallback: true,
+              fallback:
+                getPromiseRaw(window, "sparxwallet", undefined, this.nTries) ||
+                (() => Promise.reject("sparxwallet fallback error")),
+            },
+            standalone: {}, // ?
+          }
+        : {},
       oxychatwallet: window
         ? {
             extension: {
@@ -267,6 +278,9 @@ export class ProviderController {
         const providerInfo: ProviderOptionsWithConnector =
           // @ts-ignore
           allProviders.providers?.[id] || undefined;
+
+        console.log('test', allProviders.providers)
+        console.log('test', id)
 
         const {
           // wallet,
